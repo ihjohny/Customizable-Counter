@@ -36,8 +36,26 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: const Center(
-        child: CustomizableCounter(),
+      body: Center(
+        child: CustomizableCounter(
+          borderColor: const Color(0xFFE64A19),
+          borderWidth: 1.5,
+          borderRadius: 12,
+          backgroundColor: const Color(0xFFFFCCBC),
+          buttonText: "Add To Cart",
+          textColor: const Color(0xFFE64A19),
+          textSize: 18,
+          count: 0,
+          maxCount: 10,
+          onCountChange: (count) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text("Value Changed: $count"),
+                duration: const Duration(milliseconds: 250),
+              ),
+            );
+          },
+        ),
       ),
     );
   }
