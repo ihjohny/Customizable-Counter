@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-a counter widget that support different kinds of customization.
+A counter widget that support different kinds of customization.
 
 ## Features
 
