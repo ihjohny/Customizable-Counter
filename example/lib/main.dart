@@ -47,6 +47,14 @@ class _MyHomePageState extends State<MyHomePage> {
           textSize: 18,
           count: 0,
           maxCount: 10,
+          incrementIcon: const Icon(
+            Icons.text_increase,
+            color: Colors.yellowAccent,
+          ),
+          decrementIcon: const Icon(
+            Icons.text_decrease,
+            color: Colors.yellowAccent,
+          ),
           onCountChange: (count) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(

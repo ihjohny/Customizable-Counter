@@ -2,21 +2,53 @@ library customizable_counter;
 
 import 'package:flutter/material.dart';
 
+/// A counter widget that support different kinds of customization.
 class CustomizableCounter extends StatefulWidget {
+  /// color of widget border
   final Color? borderColor;
+
+  /// width of widget border
   final double? borderWidth;
+
+  /// radius of widget border
   final double? borderRadius;
+
+  /// color of widget background
   final Color? backgroundColor;
+
+  /// text that will shown on widget if counter value is zero.
   final String? buttonText;
+
+  /// button title and counter text color
   final Color? textColor;
+
+  /// button title and counter text size
   final double? textSize;
+
+  /// icon widget that will be shown on left side and by clicking this widget
+  /// the counter value will de decreased.
   final Widget? decrementIcon;
+
+  /// icon widget that will be shown on right side and by clicking this widget
+  /// the counter value will de increased.
   final Widget? incrementIcon;
+
+  /// the current value of the counter.
   final double count;
+
+  /// the maximum value support for counter
   final double maxCount;
+
+  /// the minimum value support for counter
   final double minCount;
+
+  /// amount increased or decreased after clicking buttons.
   final double step;
+
+  /// does shown button text when counter value is zero.
   final bool showButtonText;
+
+  /// called when the counter value change by clicking button.
   final void Function(double c)? onCountChange;
 
   const CustomizableCounter({
