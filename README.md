@@ -16,7 +16,7 @@ and the Flutter guide for
 A counter widget that support different kinds of customization.
 
 <p align="center">
-	<img src="https://github.com/ihjohny/Customizable-Counter/blob/main/screenshot/screenshot.png" alt="Sample Customizable Counter" />
+	<img src="https://raw.githubusercontent.com/ihjohny/Customizable-Counter/main/screenshot/screenshot.png" alt="Sample Customizable Counter" />
 </p>
 
 ### Installation
