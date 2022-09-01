@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Customizable Counter Example',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -38,22 +39,24 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: CustomizableCounter(
-          borderColor: const Color(0xFFE64A19),
-          borderWidth: 1.5,
-          borderRadius: 12,
-          backgroundColor: const Color(0xFFFFCCBC),
-          buttonText: "Add To Cart",
-          textColor: const Color(0xFFE64A19),
-          textSize: 18,
+          borderColor: Colors.yellow,
+          borderWidth: 5,
+          borderRadius: 100,
+          backgroundColor: Colors.amberAccent,
+          buttonText: "Add Item",
+          textColor: Colors.white,
+          textSize: 22,
           count: 0,
+          step: 1,
+          minCount: 0,
           maxCount: 10,
           incrementIcon: const Icon(
-            Icons.text_increase,
-            color: Colors.yellowAccent,
+            Icons.add,
+            color: Colors.white,
           ),
           decrementIcon: const Icon(
-            Icons.text_decrease,
-            color: Colors.yellowAccent,
+            Icons.remove,
+            color: Colors.white,
           ),
           onCountChange: (count) {
             ScaffoldMessenger.of(context).showSnackBar(

@@ -114,7 +114,7 @@ class _CustomizableCounterState extends State<CustomizableCounter> {
                 color: widget.borderColor ?? Theme.of(context).primaryColor,
                 width: widget.borderWidth ?? 2.0),
           ),
-          child: (mCount == 0) && widget.showButtonText
+          child: ((mCount <= widget.minCount) && widget.showButtonText)
               ? MaterialButton(
                   onPressed: () {
                     increment();
