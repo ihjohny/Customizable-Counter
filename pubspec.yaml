@@ -1,6 +1,6 @@
 name: customizable_counter
 description: a counter widget that support different kinds of customization.
-version: 1.0.3
+version: 1.0.3 
 homepage: https://github.com/ihjohny/Customizable-Counter
 
 environment:
