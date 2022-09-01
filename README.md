@@ -11,9 +11,11 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
+# Customizable Counter
+
 A counter widget that support different kinds of customization.
 
-![alt text](screenshot/screenshot.png "Sample Screen")
+![alt text](https://github.com/ihjohny/Customizable-Counter/blob/main/screenshot/screenshot.png "Sample Screen")
 
 ### Installation
 
