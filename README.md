@@ -13,3 +13,6 @@ and the Flutter guide for
 
 A counter widget that support different kinds of customization.
 
+
+![alt text](sample/screenshot.png "Sample Screen") 
+
