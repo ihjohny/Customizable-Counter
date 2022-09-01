@@ -83,7 +83,7 @@ In order to customize the widget ui there are several attributes that are suppor
 
 | Attribute | Type  | Default | Required | Description |
 |-----------|-------|---------|-------------|----------|
-| `borderColor` | `Color` |  | `null` | color of widget border |
+| `borderColor` | `Color` | `null` | `No` | color of widget border |
 | `borderWidth` | `double` | `null`  | `No` | width of widget border |
 | `borderRadius` | `double` | `null` | `No` | radius of widget border |
 | `backgroundColor` | `Color` | `null` | `No` | color of widget background |
