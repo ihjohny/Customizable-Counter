@@ -13,6 +13,63 @@ and the Flutter guide for
 
 A counter widget that support different kinds of customization.
 
+![alt text](screenshot/screenshot.png "Sample Screen")
 
-![alt text](sample/screenshot.png "Sample Screen") 
+### Installation
+
+#### From `pubspec.yaml`
+
+Add the following line to `pubspec.yaml`:
+
+```yaml
+dependencies:
+  customizable_counter: <last-release>
+```
+
+and
+
+```bash
+flutter pub get
+```
+
+#### From cli
+
+run following command:
+
+```bash
+flutter pub add customizable_counter
+```
+
+### Basic setup
+
+*Complete example [available here](https://github.com/ihjohny/Customizable-Counter/blob/main/example/lib/main.dart).*
+
+```dart
+@override
+Widget build(BuildContext context) =>
+    CustomizableCounter(
+      borderColor: Colors.yellow,
+      borderWidth: 5,
+      borderRadius: 100,
+      backgroundColor: Colors.amberAccent,
+      buttonText: "Add Item",
+      textColor: Colors.white,
+      textSize: 22,
+      count: 0,
+      step: 1,
+      minCount: 0,
+      maxCount: 10,
+      incrementIcon: const Icon(
+        Icons.add,
+        color: Colors.white,
+      ),
+      decrementIcon: const Icon(
+        Icons.remove,
+        color: Colors.white,
+      ),
+      onCountChange: (count) {
+
+      },
+    );
+```
 
