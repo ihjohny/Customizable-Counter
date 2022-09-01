@@ -8,4 +8,8 @@
 
 ## 1.0.2
 
-*  Fixing minor bug and update documentation.
+* Fixing minor bug and update documentation.
+
+## 1.0.3
+
+* Fixing minor bug and update documentation.
