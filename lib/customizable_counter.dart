@@ -51,6 +51,12 @@ class CustomizableCounter extends StatefulWidget {
   /// called when the counter value change by clicking button.
   final void Function(double c)? onCountChange;
 
+  /// called when the counter value increase by clicking increment button.
+  final void Function(double c)? onIncrement;
+
+  /// called when the counter value increase by clicking increment button.
+  final void Function(double c)? onDecrement;
+
   const CustomizableCounter({
     Key? key,
     this.borderColor,
@@ -68,6 +74,8 @@ class CustomizableCounter extends StatefulWidget {
     this.step = 1,
     this.showButtonText = true,
     this.onCountChange,
+    this.onIncrement,
+    this.onDecrement
   }) : super(key: key);
 
   @override
@@ -88,6 +96,7 @@ class _CustomizableCounterState extends State<CustomizableCounter> {
       if ((mCount - widget.step) >= widget.minCount) {
         mCount -= widget.step;
         widget.onCountChange?.call(mCount);
+        widget.onDecrement?.call(mCount);
       }
     });
   }
@@ -97,6 +106,7 @@ class _CustomizableCounterState extends State<CustomizableCounter> {
       if ((mCount + widget.step) <= widget.maxCount) {
         mCount += widget.step;
         widget.onCountChange?.call(mCount);
+        widget.onIncrement?.call(mCount);
       }
     });
   }
@@ -116,43 +126,43 @@ class _CustomizableCounterState extends State<CustomizableCounter> {
           ),
           child: ((mCount <= widget.minCount) && widget.showButtonText)
               ? MaterialButton(
-                  onPressed: () {
-                    increment();
-                  },
-                  child: Text(
-                    widget.buttonText ?? "Add",
-                    style: TextStyle(
-                      color: widget.textColor,
-                      fontSize: widget.textSize,
-                    ),
-                  ))
-              : Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    IconButton(
-                        onPressed: decrement,
-                        icon: widget.decrementIcon ??
-                            Icon(
-                              Icons.remove,
-                              color: widget.textColor,
-                            )),
-                    Text(
-                      _formatDouble(mCount),
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: widget.textColor,
-                        fontSize: widget.textSize,
-                      ),
-                    ),
-                    IconButton(
-                        onPressed: increment,
-                        icon: widget.incrementIcon ??
-                            Icon(
-                              Icons.add,
-                              color: widget.textColor,
-                            )),
-                  ],
+              onPressed: () {
+                increment();
+              },
+              child: Text(
+                widget.buttonText ?? "Add",
+                style: TextStyle(
+                  color: widget.textColor,
+                  fontSize: widget.textSize,
                 ),
+              ))
+              : Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                  onPressed:decrement,
+                  icon: widget.decrementIcon ??
+                      Icon(
+                        Icons.remove,
+                        color: widget.textColor,
+                      )),
+              Text(
+                _formatDouble(mCount),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: widget.textColor,
+                  fontSize: widget.textSize,
+                ),
+              ),
+              IconButton(
+                  onPressed: increment,
+                  icon: widget.incrementIcon ??
+                      Icon(
+                        Icons.add,
+                        color: widget.textColor,
+                      )),
+            ],
+          ),
         )
       ],
     );
