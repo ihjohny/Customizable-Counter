@@ -58,10 +58,26 @@ class _MyHomePageState extends State<MyHomePage> {
             Icons.remove,
             color: Colors.white,
           ),
-          onCountChange: (count) {
+          onDecrement: (value){
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
-                content: Text("Value Changed: $count"),
+                content: Text("Value Decremented: $value"),
+                duration: const Duration(milliseconds: 250),
+              ),
+            );
+          },
+          onIncrement: (value){
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text("Value Incremented: $value"),
+                duration: const Duration(milliseconds: 250),
+              ),
+            );
+          },
+          onCountChange: (value){
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                content: Text("Value Changed: $value"),
                 duration: const Duration(milliseconds: 250),
               ),
             );

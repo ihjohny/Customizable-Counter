@@ -74,6 +74,12 @@ Widget build(BuildContext context) =>
       onCountChange: (count) {
 
       },
+      onIncrement: (count) {
+
+      },
+      onDecrement: (count) {
+
+      },
     );
 ```
 
@@ -98,4 +104,6 @@ In order to customize the widget ui there are several attributes that are suppor
 | `step` | `double` | `1` | `No` | amount increased or decreased after clicking buttons. |
 | `showButtonText` | `bool` | `true` | `No` | does shown button text when counter value is zero. |
 | `onCountChange` | `Function(double c)` | `null` | `No` | called when the counter value change by clicking button. |
+| `onIncrement` | `Function(double c)` | `null` | `No` | called when the counter value increment by clicking Increment button. |
+| `onCountChange` | `Function(double c)` | `null` | `No` | called when the counter value decrement by clicking Decrement button. |
 
