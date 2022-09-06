@@ -13,3 +13,7 @@
 ## 1.0.3
 
 * Fixing minor bug and update documentation.
+
+## 1.0.4
+
+* Added separate increment and decrement callbacks.
