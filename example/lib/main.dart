@@ -50,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
           step: 1,
           minCount: 0,
           maxCount: 10,
+          suffix: "%",
           incrementIcon: const Icon(
             Icons.add,
             color: Colors.white,
@@ -58,7 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Icons.remove,
             color: Colors.white,
           ),
-          onDecrement: (value){
+          onDecrement: (value) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text("Value Decremented: $value"),
@@ -66,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             );
           },
-          onIncrement: (value){
+          onIncrement: (value) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text("Value Incremented: $value"),
@@ -74,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             );
           },
-          onCountChange: (value){
+          onCountChange: (value) {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text("Value Changed: $value"),
